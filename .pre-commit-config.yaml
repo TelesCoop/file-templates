@@ -1,13 +1,13 @@
 exclude: ^(.*\/migrations|.*package.json|.*package-lock.json|Pipfile*)
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-merge-conflict
       - id: forbid-new-submodules
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
       - id: check-byte-order-marker
       - id: check-case-conflict
@@ -18,21 +18,21 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.1.9
+    rev: v1.5.6
     hooks:
       - id: forbid-crlf
       - id: remove-crlf
       - id: forbid-tabs
       - id: remove-tabs
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
       - id: check-json
       - args:
           - --autofix
         id: pretty-format-json
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
       - id: check-ast
         language_version: python3.10
@@ -47,60 +47,60 @@ repos:
         id: fix-encoding-pragma
       - id: requirements-txt-fixer
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.7.2
+    rev: v3.22.0
     hooks:
       - id: pyupgrade
   - repo: https://github.com/psf/black
-    rev: 23.12.1
+    rev: 26.10.1
     hooks:
       - id: black
         language_version: python3.10
   - repo: https://github.com/pycqa/flake8
-    rev: 3.8.3
+    rev: 7.5.0
     hooks:
       - args:
           - --config=.flake8
         id: flake8
         language_version: python3.10
   - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    rev: v1.3.0
+    rev: v1.4.2
     hooks:
       - id: python-safety-dependencies-check
   - repo: https://github.com/bemeurer/beautysh.git
-    rev: 6.0.1
+    rev: v6.4.3
     hooks:
       - id: beautysh
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.1.4
+    rev: 3.0.0
     hooks:
       - id: script-must-have-extension
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
       - id: check-xml
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.24.2
+    rev: v1.38.0
     hooks:
       - args:
           - "-d {rules: {line-length: {max: 999}}}"
         id: yamllint
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
       - id: check-yaml
       - id: sort-simple-yaml
   - repo: https://gitlab.com/devopshq/gitlab-ci-linter
-    rev: v1.0.1
+    rev: v1.0.6
     hooks:
       - id: gitlab-ci-linter
 
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.56.0
+    rev: v10.14.0
     hooks:
       - id: eslint
         name: eslint
         additional_dependencies:
-          - eslint@^8.57.0
+          - eslint@^10.14.0
           - vue-eslint-parser@latest
           - eslint-plugin-vue@latest
           - eslint-plugin-jquery@latest
@@ -126,7 +126,7 @@ repos:
         language: system
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: "v3.3.3"
+    rev: "v3.9.10"
     hooks:
       - id: prettier
         name: prettier
@@ -150,7 +150,7 @@ repos:
         pass_filenames: false
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.3.1
+    rev: v4.19.3
     hooks:
       - id: commitizen
         stages:
